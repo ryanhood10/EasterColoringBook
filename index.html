@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+  name="description"
+  content="Find free Easter activities with our downloadable Easter Coloring book! Bring the family together Easter 2024 with our fun activities, games, and Easter arts & crafts at creativecoloring.io!"
+/>
+  <title>Download Your Free Easter eBook</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="https://creativecoloring.io" target="_blank"><img src="images/Screenshot 2024-03-27 at 11.54.25 AM.png" alt="Creative Coloring Logo"></a>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Download Your Free Easter eBook</h1>
+    <!-- Slideshow for marketing images -->
+    <div class="slideshow">
+      <img src="images/MarketingGraphicEaster1.jpg" alt="Marketing Graphic 1">
+      <!-- <img src="images/MarketingGraphicEaster2.jpg" alt="Marketing Graphic 2"> -->
+      <img src="images/MarketingGraphicEaster3.jpg" alt="Marketing Graphic 3">
+    </div>
+    <h2>Download our entire Easter Coloring Book 
+      <br>
+        For tablet, or Print off and use at home!!
+    </h2>
+    <p>Enter your email below to receive the book:</p>
+    <form id="emailForm">
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Get Your eBook</button>
+    </form>
+    <div id="bottom">
+    <a href="https://www.creativecoloring.io" class="return-link" target="_blank">Return to CreativeColoring.io</a>
+    <img src="images/ICON.png" alt="CreativeColoring Icon" id="bottomIcon" >
+  </div>
+  </div>
+
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      // You can add your email submission logic here (e.g., using AJAX to submit to your email collection service)
+      alert('Thank you! Your eBook download link will be sent to your email.');
+      event.preventDefault(); // Prevent form submission for this example
+    });
+  </script>
+</body>
+</html>
