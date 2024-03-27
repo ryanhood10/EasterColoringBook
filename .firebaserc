@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "/download",
+        "destination": "/download.html"
+      },
+      {
+        "source": "/coloring-book-download",
+        "destination": "/download.html"
+      }
+    ]
+  }
+}
