@@ -1,89 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.9.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.9.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.9.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+  name="description"
+  content="Find free Easter activities with our downloadable Easter Coloring book! Bring the family together Easter 2024 with our fun activities, games, and Easter arts & crafts at creativecoloring.io!"
+/>
+  <title>Download Your Free Easter Coloring Book!</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="https://creativecoloring.io" target="_blank"><img src="images/Screenshot 2024-03-27 at 11.54.25 AM.png" alt="Creative Coloring Logo"></a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </header>
+  <div class="container">
+    <h1>Download Your Free Easter eBook</h1>
+    <!-- Slideshow for marketing images -->
+    <div class="slideshow">
+      <img src="images/MarketingGraphicEaster1.jpg" alt="Marketing Graphic 1">
+      <!-- <img src="images/MarketingGraphicEaster2.jpg" alt="Marketing Graphic 2"> -->
+      <img src="images/MarketingGraphicEaster3.jpg" alt="Marketing Graphic 3">
+    </div>
+    <h2>Download our entire Easter Coloring Book 
+      <br>
+        For tablet, or Print off and use at home!!
+    </h2>
+    <p>Enter your email below to receive the book:</p>
+    <form id="emailForm">
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Get Your eBook</button>
+    </form>
+    <div id="bottom">
+    <a href="https://www.creativecoloring.io" class="return-link" target="_blank">Return to CreativeColoring.io</a>
+    <img src="images/ICON.png" alt="CreativeColoring Icon" id="bottomIcon" >
+  </div>
+  </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      // You can add your email submission logic here (e.g., using AJAX to submit to your email collection service)
+      alert('Thank you! Your eBook download link will be sent to your email.');
+      event.preventDefault(); // Prevent form submission for this example
+    });
+  </script>
+</body>
 </html>
