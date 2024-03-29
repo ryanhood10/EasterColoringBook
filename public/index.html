@@ -31,7 +31,7 @@
         For tablet, or Print off and use at home!!
     </h2>
     <p>Enter your email below to receive the book:</p>
-    <form id="emailForm">
+    <form id="emailForm" action="/subscribe" method="post">
       <input type="email" id="email" name="email" placeholder="Your Email" required>
       <button type="submit">Get Your eBook</button>
     </form>
@@ -44,8 +44,29 @@
   <script>
     document.getElementById('emailForm').addEventListener('submit', function(event) {
       // You can add your email submission logic here (e.g., using AJAX to submit to your email collection service)
+      
+      
       alert('Thank you! Your eBook download link will be sent to your email.');
       event.preventDefault(); // Prevent form submission for this example
+
+      if(this.email.value == null || this.email.value == ""){
+        error.classList.add('errorAnim');
+      } else {
+        let fetchData = {
+          method: 'POST',
+          body: JSON.stringify({email: this.email.value, js: true}),
+          headers: {"Content-Type": "application/json"}
+        }
+
+        fetch('/subscribe', fetchData)
+        .then(res => {
+          if  (res.ok){
+            //yay
+          } else {
+            error.classList.add('errorAnim')
+          }
+        })
+      }
     });
   </script>
 </body>
