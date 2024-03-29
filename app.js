@@ -26,16 +26,26 @@ app.post('/subscribe', (req, res) => {
     const mcDataPosts = JSON.stringify(mcData);
 
     const options = {
-        url: '',
+        url: 'https://us22.api.mailchimp.com/3.0/lists/343852a974', // 343852a974
         method: 'POST',
         headers: {
-            Authorization: 'auth ..'
+            Authorization: 'auth fc7ea92f05c2674a1268b5982ce4b2c7' //us22
         },
         body: mcDataPosts
     }
 
     if(email){
-        //successful so far
+        request(options, (err, response, body) => {
+            if(err) {
+                res.json({error: err})
+            } else {
+                if (js){
+                    res.sendStatus(200);
+                } else {
+                    res.redirect('/success.html')
+                }
+            }
+        })
     } else {
         res.status(404).send({message: 'Failed'})
     }
