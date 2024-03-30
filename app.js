@@ -6,6 +6,7 @@ const path = require('path');
 const app = express();
 
 //middleware
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
